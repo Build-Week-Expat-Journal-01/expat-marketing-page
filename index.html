@@ -1,7 +1,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="index.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
-
+<link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"
+  />
 <html>
 <head>
   <title>Expat Journal</title>
@@ -15,16 +18,22 @@ Mobile Page Nav links will be accessed from menu button. -->
 </head>
 <body>
 <div class= "wrap">
-  <nav class="Menu" id="mySidebar"><br>
-    <h3 class="Logo"><b>EXPAT<br>JOURNAL</b></h3>
-    <a href="index.html"  class="navButton">HOME</a> 
+  <nav class= "animate__fadeInDown"id="mySidebar">
+    <a
+    href="index.html" class="Logo"><b>THE EXPAT<br>JOURNAL</b>
+  </a >
+  
+    <div class= "buttons">
+      <a href="index.html"  class="navButton">HOME</a> 
     <a href="aboutMe.html"  class="navButton">ABOUT</a> 
-    <a href="#"  class="navButton">LOGIN</a>
+    <a href="https://expat-front-end-sigma.vercel.app/"  class="navButton">LOGIN</a>
+  </div>
   </nav>
-
+    <!-- </div> -->
   <!-- Gallery of pictures/stories will be in grid format. 
  -->
   <!-- Photo grid -->
+  <div class= "responsive"></div>
   <div class="gallery">
     <div class="column">
       <img src="Assets/anthony-delanoix-CFi7_hCXecU-unsplash.jpg" >
@@ -62,6 +71,7 @@ Mobile Page Nav links will be accessed from menu button. -->
       <img src="Assets/add/new/ming-jun-tan-o6ICDlt5_2k-unsplash.jpg" >
     </div>
   </div>
+</div>
 </div>
 </body>
 
