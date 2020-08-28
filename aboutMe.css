@@ -13,7 +13,7 @@ menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
 	margin: 0;
 	padding: 0;
-	border:0 ;
+	border: 0;
 	font-size: 100%;
 	font: inherit;
 	vertical-align: baseline;
@@ -23,20 +23,25 @@ article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;
 }
+
 body {
 	line-height: 1;
 }
+
 ol, ul {
 	list-style: none;
 }
+
 blockquote, q {
 	quotes: none;
 }
+
 blockquote:before, blockquote:after,
 q:before, q:after {
 	content: '';
 	content: none;
 }
+
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
@@ -47,11 +52,9 @@ table {
 body,h1,h2,h3,h4,h5 {
 	font-family: "Raleway", sans-serif
 }
-.body {
-	display: flex;
-}
+/* Menu Nav bar */
 #mySidebar {
-	width: 20%;
+	/* width: 20%; */
 	font-weight: bold;
 	z-index: 3;
 	color: #757575;
@@ -61,9 +64,8 @@ body,h1,h2,h3,h4,h5 {
 	height: 100%;
 	overflow: auto;
 	display: flex;
-	flex-direction: column;
-	position:sticky;
-	margin-left: 0;
+    flex-direction: column;
+    margin-left: 0;
 	margin-right: 0;
 }
 .animate__fadeInDown {
@@ -74,7 +76,7 @@ body,h1,h2,h3,h4,h5 {
 }
 .Logo {
 	padding-top: 64px;
-	padding-bottom: 64px;
+    padding-bottom: 64px;
 	text-align: center;
 	font-size: 24px;
 	margin: 10px, 0;
@@ -106,51 +108,76 @@ body,h1,h2,h3,h4,h5 {
 	opacity: 1;
 	color: black;
 }
-.wrap {
-	display: flex;
-	width: 100%;
+.container{
+	display:flex;
+	flex-direction: row;
+	height:100%;
 }
-.gallery {
-	display: flex;
-	flex-wrap: wrap;
-	width: 80%;
+.wrap{
+	width:20%;
+    padding:0;
+} 
+.wrap a{
+	width:100%;
 }
-.column {
-	width: 33.33333%;
+/* Content of the page (profile picture, and text) */
+
+.content{
 	display: flex;
-	flex-direction: column;	
+	flex-direction: column;
+	width:80%;
 }
-.column img{
-	margin-bottom: 0; 
-	opacity: 0.8; 
-	cursor: pointer;
-	width: 100%;
-	height: auto;
+.profilepic{
+	margin-top: 5vw;
+    margin-left: 25vw;
+    margin-bottom: 4vw;
+    margin-right:1vw;
+	display:flex;
+	width: 30%;
+	height:auto;
 	vertical-align: middle;
-	border-style: none;
+	max-width: 20%;
 }
-.column img:hover{opacity: 1}
-
-
-/* MEDIA BREAKPOINT 800px */
+.profilepic img{
+	width: 25vw;
+}
+.words{
+    padding-right: 10vw;
+    padding-left: 4vw; 
+    line-height: 2.5;
+}
+p{
+    text-align:center;
+}
+/* ////////////////////Media Breakpoint 1200px//////////////// */
+/* Adjusting the profile picture to not shrink so small between breakpoints */
+@media (max-width: 1200px){
+.profilepic{
+    margin-left:18vw;
+}
+.profilepic img{
+    width:40vw;
+}
+}
+/* ////////////////////Media Breakpoint 800px//////////////// */
 @media (max-width: 800px){
+.container{
+    display:flex;
+    flex-direction: column;
+}
+/* Menu Nav bar */
 .wrap{
 	display: flex;
-	flex-direction: column;
-	width:100%;
-}
-.gallery{
-	width:100%;
+    flex-direction: column;
+    width:100%;
 }
 #mySidebar{
 	align-content: center;
 	padding-bottom: 2vw;
 	display:flex;
-	flex-direction: column;
-	width:100%;
+    flex-direction: column;
+    width:100%;
 	font-size: 24px;
-	margin-left: 0;
-	margin-right: 0;
 }
 .logo{
 	justify-content: center;
@@ -168,20 +195,41 @@ body,h1,h2,h3,h4,h5 {
 	padding-left:10vw;
 	padding-right:10vw;
 }
-.column{
-	width:50%;	
+/* Content of page */
+.content{
+    width:100%;
+}
+.profilepic{
+    padding-left: 8vw;
+    align-content: center;
+    padding-top: 3rem;
+    width:60vw;
+}
+.profilepic img{
+    width: 50vw;
+    margin: auto;
+}
+.words{
+    margin: auto;
+    padding-left: 3vw; 
+}
+p{
+    margin-left:8vw ;
+    text-align:center;
 }
 }
 
-/* MEDIA BREAKPOINT 500px */
-
+/* ////////////////////Media Breakpoint 500px//////////////// */
 @media (max-width: 500px){
+
+.container{
+    display: flex;
+    flex-direction: column;
+}
+    /* Menu Nav bar  */
 .wrap{
 	display: flex;
 	flex-direction: column;
-	width:100%;	
-}
-.gallery{
 	width:100%;
 }
 #mySidebar{
@@ -191,12 +239,10 @@ body,h1,h2,h3,h4,h5 {
 	flex-direction: column;
 	width:100%;
 	font-size: 24px;
-	margin-left: 0;
-	margin-right: 0;
 }
 .logo{
-	justify-content: center;
-	margin-top: 0px;
+    justify-content: center;
+    margin-top: 0px;
 	margin:0;
 	padding-top:2vw;
 	padding-bottom:0;
@@ -207,10 +253,23 @@ body,h1,h2,h3,h4,h5 {
 	flex-direction: row;
 }
 .buttons a{
-	padding-left:10vw;
+    padding-left:10vw;
 	padding-right:10vw;
 }
-.column{
-	width:100%;	
+/* Content of the page */
+.content{
+    margin-bottom:8vw;
+}
+.profilepic{
+    padding-left: 0;
+    margin-left: 15vw;
+}
+.profilepic img{
+    width:70vw; 
+}
+p{
+    margin-top:8vw;
+    margin-bottom:8vw;
+    text-align:center;
 }
 }
